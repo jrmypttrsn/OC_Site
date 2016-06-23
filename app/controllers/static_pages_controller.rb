@@ -9,4 +9,7 @@ class StaticPagesController < ApplicationController
   def standards
   end
 
+  def links
+  end
+
 end
