@@ -12,4 +12,13 @@ class StaticPagesController < ApplicationController
   def links
   end
 
+  def list_of_operators
+  end
+
+  def mistakes
+  end
+
+  def contact
+  end
+
 end
