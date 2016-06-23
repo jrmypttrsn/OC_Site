@@ -6,4 +6,7 @@ class StaticPagesController < ApplicationController
   def how_to_steps
   end
 
+  def standards
+  end
+
 end
