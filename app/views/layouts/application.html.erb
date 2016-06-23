@@ -2,11 +2,48 @@
 <html>
 <head>
   <title>Website</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo"><%= image_tag "OClogo_150x45.gif" %></a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "How-to Steps", how_to_steps_path %></li>
+      <li><a href="collapsible.html">Certification Packet</a></li>
+      <li><a href="sass.html">Standards</a></li>
+      <li><a href="badges.html">Links</a></li>
+      <li><a href="collapsible.html">List of Operators</a></li>
+      <li><a href="badges.html">Mistakes to Avoid</a></li>
+      <li><a href="collapsible.html">Contact</a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "How-to Steps", how_to_steps_path %></li>
+      <li><a href="collapsible.html">Certification Packet</a></li>
+      <li><a href="sass.html">Standards</a></li>
+      <li><a href="badges.html">Links</a></li>
+      <li><a href="collapsible.html">List of Operators</a></li>
+      <li><a href="badges.html">Mistakes to Avoid</a></li>
+      <li><a href="collapsible.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
 <%= yield %>
 
