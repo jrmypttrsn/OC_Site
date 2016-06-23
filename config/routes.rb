@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/how-to-steps', to: 'static_pages#how_to_steps', as: "how_to_steps"
   get '/standards', to: 'static_pages#standards', as: "standards"
+  get '/packets', to: 'static_pages#packets', as: "packets"
   get '/links', to: 'static_pages#links', as: 'links'
   get '/list-of-operators', to: 'static_pages#list_of_operators', as: 'list_of_operators'
   get '/mistakes-to-avoid', to: 'static_pages#mistakes', as: 'mistakes_to_avoid'

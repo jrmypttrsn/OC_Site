@@ -21,4 +21,8 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def packets
+    @contact = Contact.new
+  end
+
 end

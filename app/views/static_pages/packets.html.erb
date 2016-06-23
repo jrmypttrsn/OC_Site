@@ -1,0 +1,52 @@
+<div class="page-container">
+
+  <h1>OneCert Certification Packet</h1>
+  <p>
+    Please complete this form to request documents and forms from OneCert. The
+    requested information will be sent immediately via email. We only use your
+    email address to send you updates when documents change or other new
+    information is available. We never have, and never will, share your
+    information with anyone else.<br><br>
+    Your name and email address are required fields. Also be sure to indicate what
+    information you are requesting.
+  </p>
+
+  <%= form_for @contact do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+
+    <%=f.label :last_name %>
+    <%=f.text_field :last_name %>
+
+    <%=f.label :email %>
+    <%=f.text_field :email %>
+
+    <%=f.label :phone %>
+    <%=f.text_field :phone %>
+
+    <%=f.label :company %>
+    <%=f.text_field :company %>
+
+    <%=f.label :address %>
+    <%=f.text_field :address %>
+
+    <%=f.label :city %>
+    <%=f.text_field :city %>
+
+    <%=f.label :state, "State/Providence" %>
+    <%=f.text_field :state %>
+
+    <%=f.label :country %>
+    <%=f.text_field :country %>
+
+    <h3>USDA NOP, EU, Canada, International</h3>
+    <%=f.check_box :crop, "Crop Certification" %>
+    <%=f.check_box :handler, "Handler Certification (processor, manufacturer, trader, etc.)" %>
+    <%=f.check_box :wild, "Wild Crop Certification" %>
+    <%=f.check_box :livestock, "Livestock Certification" %>
+    <%=f.check_box :grower_group, "Grower Group Certification" %>
+
+    <%= f.submit %>
+  <% end %>
+
+</div>
