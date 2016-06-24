@@ -26,7 +26,21 @@ class StaticPagesController < ApplicationController
   end
 
   def submit
-    #logic to save contact and if save complete then send email(s)
+    @contact = Contact.new(user_params)
+    if @contact.save
+      #logic to send email(s)
+      #redirect somewere with notice: "Emails sent"
+    else
+      flash.now[:alert] = "Certification Packets not sent."
+      render :packets
+    end
+
+  end
+
+  private
+
+  def user_params
+    params.permit(:first_name, :last_name, :email, :phone, :company, :address, :city, :state, :country)
   end
 
 end

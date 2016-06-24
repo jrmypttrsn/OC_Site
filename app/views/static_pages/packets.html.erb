@@ -14,17 +14,30 @@
     <%= form_tag("/submit", method: "post") do %>
       <div class="row">
         <div class="col s12 m4">
+
+          <% if @contact.errors.any? %>
+          <div class="row">
+            <div class="col s12">
+              <div class="card-panel teal">
+                <% @contact.errors.full_messages.each do |error| %>
+                  <p class="white-text">Error: <%=error%></p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+
           <div class="input-field">
             <%= label_tag :first_name %>
             <%= text_field_tag :first_name, nil, :required => true %>
           </div>
           <div class="input-field">
             <%=label_tag :last_name %>
-            <%=text_field_tag :last_name %>
+            <%=text_field_tag :last_name, nil, :required => true %>
           </div>
           <div class="input-field">
             <%=label_tag :email %>
-            <%=text_field_tag :email %>
+            <%=text_field_tag :email, nil, :required => true %>
           </div>
           <div class="input-field">
             <%=label_tag :phone %>
