@@ -25,4 +25,8 @@ class StaticPagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def submit
+    byebug
+  end
+
 end

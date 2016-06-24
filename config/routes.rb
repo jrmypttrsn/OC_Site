@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/list-of-operators', to: 'static_pages#list_of_operators', as: 'list_of_operators'
   get '/mistakes-to-avoid', to: 'static_pages#mistakes', as: 'mistakes_to_avoid'
   get '/contact', to: 'static_pages#contact', as: 'contact'
+  post '/submit', to: 'static_pages#submit', as: 'submit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
