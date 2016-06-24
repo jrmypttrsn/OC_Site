@@ -26,7 +26,7 @@ class StaticPagesController < ApplicationController
   end
 
   def submit
-    byebug
+    #logic to save contact and if save complete then send email(s)
   end
 
 end
