@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= require material_icons
  */
+
+.page-container {
+  margin: 20px;
+}
+
+.form-container {
+  margin: auto;
+  
+}

@@ -1,0 +1,126 @@
+<div class="page-container">
+
+  <h1>OneCert Certification Packet</h1>
+  <p>
+    Please complete this form to request documents and forms from OneCert. The
+    requested information will be sent immediately via email. We only use your
+    email address to send you updates when documents change or other new
+    information is available. We never have, and never will, share your
+    information with anyone else.<br><br>
+    Your name and email address are required fields. Also be sure to indicate what
+    information you are requesting.
+  </p>
+  <div class="form-container">
+    <%= form_tag("/submit", method: "post") do %>
+      <div class="row">
+        <div class="col s12 m4">
+
+          <% if @contact.errors.any? %>
+          <div class="row">
+            <div class="col s12">
+              <div class="card-panel teal">
+                <% @contact.errors.full_messages.each do |error| %>
+                  <p class="white-text">Error: <%=error%></p>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+
+          <div class="input-field">
+            <%= label_tag :first_name %>
+            <%= text_field_tag :first_name, nil, :required => true %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :last_name %>
+            <%=text_field_tag :last_name, nil, :required => true %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :email %>
+            <%=text_field_tag :email, nil, :required => true %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :phone %>
+            <%=text_field_tag :phone %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :company %>
+            <%=text_field_tag :company %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :address %>
+            <%=text_field_tag :address %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :city %>
+            <%=text_field_tag :city %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :state, "State/Providence" %>
+            <%=text_field_tag :state %>
+          </div>
+          <div class="input-field">
+            <%=label_tag :country %>
+            <%=text_field_tag :country %>
+          </div>
+        </div>
+        <h3>USDA NOP, EU, Canada, International</h3>
+        <div class="col s12 m8">
+          <div>
+            <%=check_box_tag :crop %>
+            <%=label_tag :crop, "Crop Certification" %>
+          </div>
+          <div>
+            <%=check_box_tag :handler %>
+            <%=label_tag :handler, "Handler Certification (processor, manufacturer, trader, etc.)" %>
+          </div>
+          <div>
+            <%=check_box_tag :wild %>
+            <%=label_tag :wild, "Wild Crop Certification" %>
+          </div>
+          <div>
+            <%=check_box_tag :livestock %>
+            <%=label_tag :livestock, "Livestock Certification" %>
+          </div>
+          <div>
+            <%=check_box_tag :grower_group %>
+            <%=label_tag :grower_group, "Grower Group Certification" %>
+          </div>
+          <h3>Japan Agricultural Standards</h3>
+          <div>
+            <%=check_box_tag :jascrop %>
+            <%=label_tag :jascrop, "JAS Plants & Feed Certification" %>
+          </div>
+          <div>
+            <%=check_box_tag :jasprocess %>
+            <%=label_tag :jasprocess, "JAS Processed Food & Feed Certification" %>
+          </div>
+          <div>
+            <%=check_box_tag :jasrepack %>
+            <%=label_tag :jasrepack, "JAS Re-Packer Certification" %>
+          </div>
+          <h3>Other Certification Packets</h3>
+          <div>
+            <%=check_box_tag :textile %>
+            <%=label_tag :textile, "Textile Certification Packet (GOTS and/or OCS)" %>
+          </div>
+          <div>
+            <%=check_box_tag :nopregs %>
+            <%=label_tag :nopregs, "National Organic Program Regulations (Required in the US)" %>
+          </div>
+          <div>
+            <%=check_box_tag :standards %>
+            <%=label_tag :standards, "OneCert International Organic Standards" %>
+          </div>
+          <div>
+            <%=check_box_tag :eucontrol %>
+            <%=label_tag :eucontrol, "EU Control Measures" %>
+          </div>
+          <%= submit_tag "submit", class: "waves-effect waves-light btn", 'aria-label' => "submit" %>
+          <%= submit_tag "reset", class: "teal darken-3 waves-effect waves-darken-5 btn", type: :reset %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
