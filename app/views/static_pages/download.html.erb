@@ -64,7 +64,7 @@
             <%=text_field_tag :country %>
           </div>
         </div>
-        <h3>USDA NOP, EU, Canada, International</h3>
+        <p class="form-header">USDA NOP, EU, Canada, International</p class="form-header">
         <div class="col s12 m8">
           <div>
             <%=check_box_tag :crop %>
@@ -86,7 +86,7 @@
             <%=check_box_tag :grower_group %>
             <%=label_tag :grower_group, "Grower Group Certification" %>
           </div>
-          <h3>Japan Agricultural Standards</h3>
+          <p class="form-header">Japan Agricultural Standards</p class="form-header">
           <div>
             <%=check_box_tag :jascrop %>
             <%=label_tag :jascrop, "JAS Plants & Feed Certification" %>
@@ -99,7 +99,7 @@
             <%=check_box_tag :jasrepack %>
             <%=label_tag :jasrepack, "JAS Re-Packer Certification" %>
           </div>
-          <h3>Other Certification Packets</h3>
+          <p class="form-header">Other Certification Packets</p class="form-header">
           <div>
             <%=check_box_tag :textile %>
             <%=label_tag :textile, "Textile Certification Packet (GOTS and/or OCS)" %>
@@ -116,8 +116,8 @@
             <%=check_box_tag :eucontrol %>
             <%=label_tag :eucontrol, "EU Control Measures" %>
           </div>
-          <%= submit_tag "submit", class: "waves-effect waves-light btn", 'aria-label' => "submit" %>
-          <%= submit_tag "reset", class: "teal darken-3 waves-effect waves-darken-5 btn", type: :reset %>
+          <br>
+          <%= submit_tag "submit", class: "btn waves-effect waves-light", 'aria-label' => "submit" %>
         </div>
       </div>
 

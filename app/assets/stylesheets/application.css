@@ -14,6 +14,9 @@
  *= require_self
  *= require material_icons
  */
+body {
+	color: #555;
+}
 
 .page-container {
   margin: 20px;
@@ -23,3 +26,23 @@
   margin: auto;
   
 }
+
+nav ul a {
+    color: #78A22E;
+}
+
+.md-dark { 
+	color: #4F6F18; 
+}
+
+.nav-wrapper {
+	color: rgba(120, 162, 46, 0.5);
+}
+
+#ocbg {
+	color: #78A22E;
+}
+
+/*.nav-wrapper {
+	background-color:  @extend .green, .lighten-4;
+}*/
